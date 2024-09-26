@@ -1,3 +1,5 @@
+# Terraform AWS Devcontainer
+
 This repository contains a development environment using a Docker container, pre-configured with [Terraform](https://www.terraform.io/) and the [AWS CLI](https://aws.amazon.com/cli/). The setup leverages VSCode's devcontainer feature along with Docker Compose to provide a seamless environment for developing and deploying cloud infrastructure.
 
 ## Features
