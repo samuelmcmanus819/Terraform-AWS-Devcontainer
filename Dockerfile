@@ -8,5 +8,5 @@ RUN apt update && apt install -y terraform
 RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && \
     unzip awscliv2.zip && rm awscliv2.zip && ./aws/install
 # Install TFSec
-RUN curl -sSL "https://github.com/aquasecurity/tfsec/releases/download/v1.28.10/tfsec-checkgen-linux-amd64" -o /usr/local/bin/tfsec && \
+RUN curl -sSL "https://github.com/aquasecurity/tfsec/releases/download/v1.28.10/tfsec-linux-arm64" -o /usr/local/bin/tfsec && \
     chmod +x /usr/local/bin/tfsec
