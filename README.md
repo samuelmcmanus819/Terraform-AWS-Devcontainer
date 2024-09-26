@@ -19,11 +19,9 @@ This repository contains a development environment using a Docker container, pre
 ### Setup Instructions
 
 1. **Clone this repository**:
-   ```
-    bash
+   ``` bash
     git clone https://github.com/yourusername/your-repo.git
-    cd your-repo
-  ```
+    cd your-repo ```
 2. **Open the project in VSCode**:
    - Open VSCode, then choose `File > Open Folder` and select the cloned repository.
 
