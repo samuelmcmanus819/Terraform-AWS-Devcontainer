@@ -7,7 +7,7 @@
     "customizations": {
         "vscode": {
             "extensions": [
-                "amazonwebservices.amazon-q",
+                "amazonwebservices.amazon-q-vscode",
                 "hashicorp.terraform"
             ]
         }
