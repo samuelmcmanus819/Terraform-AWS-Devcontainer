@@ -7,6 +7,7 @@ RUN apt update && apt install -y terraform
 # Install AWS
 RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && \
     unzip awscliv2.zip && rm awscliv2.zip && ./aws/install
-# Install TFSec
-RUN curl -sSL "https://github.com/aquasecurity/tfsec/releases/download/v1.28.10/tfsec-linux-arm64" -o /usr/local/bin/tfsec && \
-    chmod +x /usr/local/bin/tfsec
+# Install Trivy
+RUN wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key | apt-key add - && \
+    echo deb https://aquasecurity.github.io/trivy-repo/deb $(lsb_release -sc) main | tee -a /etc/apt/sources.list.d/trivy.list && \
+    apt update && apt install -y trivy
