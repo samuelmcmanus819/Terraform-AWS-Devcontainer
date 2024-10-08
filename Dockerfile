@@ -8,7 +8,7 @@ RUN apt update && apt install -y terraform
 RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && \
     unzip awscliv2.zip && rm awscliv2.zip && ./aws/install
 # Install AWS Session Manager Plugin
-RUN curl "https://s3.amazonaws.com/session-manager-downloads/plugin/latest/linux_64bit/session-manager-plugin.deb" -o "session-manager-plugin.deb"
+RUN curl "https://s3.amazonaws.com/session-manager-downloads/plugin/latest/ubuntu_64bit/session-manager-plugin.deb" -o "session-manager-plugin.deb"
 RUN dpkg -i session-manager-plugin.deb
 # Install Trivy
 RUN wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key | apt-key add - && \
