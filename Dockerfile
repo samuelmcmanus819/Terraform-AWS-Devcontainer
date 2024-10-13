@@ -15,4 +15,4 @@ RUN wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key | apt-ke
     echo deb https://aquasecurity.github.io/trivy-repo/deb $(lsb_release -sc) main | tee -a /etc/apt/sources.list.d/trivy.list && \
     apt update && apt install -y trivy
 # Install Ansible and XMLLint
-RUN apt install -y ansible-core libxml2-utils && apt clean
+RUN apt install -y ansible-core libxml2-utils locales && apt clean && locale-gen en_US.UTF-8
